@@ -1,0 +1,17 @@
+{
+    "name": "locowerks/dynamodb-session-driver",
+    "description": "DynamoDB Session driver for Laravel 5",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martijn Meerts",
+            "email": "martijn@locowerks.net"
+        }
+    ],
+    "require": {
+      "php": ">=5.5.0",
+      "illuminate/support": "~5.0",
+      "aws/aws-sdk-php": "~3.0"
+    },
+    "minimum-stability": "stable"
+}
