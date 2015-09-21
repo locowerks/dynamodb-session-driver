@@ -1,4 +1,4 @@
-<?php namespace LocowerksPackages\DynamoDbSessionDriver;
+<?php namespace Locowerks\DynamoDbSessionDriver;
 
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\ServiceProvider;
@@ -51,7 +51,7 @@ class DynamoDbSessionDriverServiceProvider extends ServiceProvider {
      */
     public function register() {
         $this->app->singleton('command.dynamodb-session.gc', function ($app) {
-            return $app['LocowerksPackages\DynamoDbSessionDriver\Commands\GarbageCollectCommand'];
+            return $app['Locowerks\DynamoDbSessionDriver\Commands\GarbageCollectCommand'];
         });
         $this->commands('command.dynamodb-session.gc');
     }

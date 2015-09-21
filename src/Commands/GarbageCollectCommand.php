@@ -1,4 +1,4 @@
-<?php namespace LocowerksPackages\DynamoDbSessionDriver\Commands;
+<?php namespace Locowerks\DynamoDbSessionDriver\Commands;
 
 use Illuminate\Console\Command;
 use Aws\DynamoDb\DynamoDbClient;
