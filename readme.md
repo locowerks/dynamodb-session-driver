@@ -15,7 +15,7 @@ To install latest version simply add it to your `composer.json`:
 Publish config:
 
 ```javascript
-$ php artisan vendor:publish --provider='Locowerks\DynamoDbSessionDriver'
+$ php artisan vendor:publish --provider='Locowerks\DynamoDbSessionDriver\DynamoDbSessionDriverServiceProvider'
 ```
 
 Update config:
