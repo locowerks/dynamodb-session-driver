@@ -1,4 +1,4 @@
-<?php namespace Locowerks\DynamoDbSessionDriver;
+<?php namespace LocowerksPackages\DynamoDbSessionDriver;
 
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\ServiceProvider;
@@ -13,10 +13,10 @@ class DynamoDbSessionDriverServiceProvider extends ServiceProvider {
      */
     public function boot() {
         // Publishes package config file to applications config folder
-        $this->publishes([__DIR__ . '/config/dynamodb-session.php' => config_path('vendor/locowerks/dynamodb-session.php')]);
+        $this->publishes([__DIR__ . '/config/dynamodb-session.php' => config_path('dynamodb-session.php')]);
 
         Session::extend('dynamodb', function($app) {
-            $config = config('vendor.locowerks.dynamodb-session');
+            $config = config('dynamodb-session');
 
             $db = new DynamoDbClient([
                 'version'   => $config['version'],
@@ -51,7 +51,7 @@ class DynamoDbSessionDriverServiceProvider extends ServiceProvider {
      */
     public function register() {
         $this->app->singleton('command.dynamodb-session.gc', function ($app) {
-            return $app['Locowerks\DynamoDbSessionDriver\Commands\GarbageCollectCommand'];
+            return $app['LocowerksPackages\DynamoDbSessionDriver\Commands\GarbageCollectCommand'];
         });
         $this->commands('command.dynamodb-session.gc');
     }
