@@ -32,7 +32,7 @@ class GarbageCollectCommand extends Command {
      * @return mixed
      */
     public function fire() {
-        $config = config('vendor.locowerks.dynamodb-session');
+        $config = config('dynamodb-session');
 
         if($config['automatic_gc'] == true) {
             $this->comment('Automatic garbage collection is turned on.');
