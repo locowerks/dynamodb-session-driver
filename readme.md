@@ -20,7 +20,7 @@ $ php artisan vendor:publish --provider='Locowerks\DynamoDbSessionDriver'
 
 Update config:
 
-Config file is published to config/vendor/locowerks/dynamodb-session.php
+Config file is published to config/dynamodb-session.php
 
 Add your AWS DynamoDB credentials to your .env file:
 
