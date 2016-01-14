@@ -10,6 +10,12 @@ To install latest version simply add it to your `composer.json`:
 "locowerks/dynamodb-session-driver": "~0.1"
 ```
 
+Add to config/app.php autoload providers array:
+
+```javascript
+Locowerks\DynamoDbSessionDriver\DynamoDbSessionDriverServiceProvider::class,
+```
+
 ## Configuration
 
 Publish config:
